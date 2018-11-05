@@ -30,8 +30,8 @@ function addRow(tBodyID, rDate, rJobNo, rBatchCode ) {
 }
 
 $("#btn-clear").click( function() {
-    //console.log("Clearing Table");
     document.getElementById("scansBody").innerHTML = "";
+    document.getElementById("barcodes").select();
 });
 
 $("#btn-save").click( function() {
