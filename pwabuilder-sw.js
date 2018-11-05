@@ -3,6 +3,20 @@
 var CACHE = 'pwabuilder-precache';
 var precacheFiles = [
       /* Add an array of files to precache for your app */
+      '/',
+      '/index.htm',
+      '/manifest.json',
+      '/pwabuilder-sw-register.js',
+      '/pwabuilder-sw.js',
+      '/js/bootstrap.min.js',
+      '/js/FileSaver.js',
+      '/js/jquery.min.js',
+      '/js/main.js',
+      '/js/ManUp.js',
+      '/js/popper.min.js',
+      '/js/table2csv.js',
+      '/css/bootstrap.min.css',
+      '/css/main.css'
     ];
 
 //Install stage sets up the cache-array to configure pre-cache content
