@@ -6,10 +6,10 @@
     "display": "standalone",
     "start_url": "https://mbshaw.github.io/inkscan/",
     "short_name": "Ink Scan",
-    "theme_color": "#c6181e",
+    "theme_color": "#000000",
     "description": "An app to record ink batch codes used in a print job",
     "orientation": "any",
-    "background_color": "#c6181e",
+    "background_color": "#000000",
     "related_applications": [],
     "prefer_related_applications": false,
     "icons": [
