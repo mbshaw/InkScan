@@ -1,6 +1,6 @@
 //This is the service worker with the Cache-first network
 
-var CACHE = 'Cachev1.0';
+var CACHE = 'Cachev1.1';
 var precacheFiles = [
       /* Add an array of files to precache for your app */
       '/',
