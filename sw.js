@@ -11,7 +11,7 @@ var precacheFiles = [
       './js/FileSaver.js',
       './js/jquery.min.js',
       './js/main.js',
-      './js/ManUp.js',
+      './js/manup.js',
       './js/popper.min.js',
       './js/table2csv.js',
       '/css/bootstrap.min.css',
