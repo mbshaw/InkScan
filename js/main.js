@@ -104,7 +104,7 @@ function dateAsDDMMYYY(d){
                             }
                         }
                     }
-                    //console.log(table.toLowerCase());
+                    console.log(table);
                 }
                 reader.readAsText(fileUpload.files[0]);
             } else {
