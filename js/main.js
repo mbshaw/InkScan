@@ -149,5 +149,7 @@ function dateAsDDMMYYY(d){
         $("#barcodes").val("");
       });
     
-    if($("#date").val = ""){ $("#date").valueAsDate = new Date()};
+    if($("#date").val = ""){
+         $("#date").valueAsDate = new Date();
+    };
     $("#barcodes").select();
