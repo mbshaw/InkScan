@@ -89,6 +89,7 @@ function dateAsDDMMYYY(d){
             
             if (typeof (FileReader) != "undefined") {
                 var reader = new FileReader();
+                reader.
                 reader.onload = function (e) {
                     var table = document.getElementById("scansBody");
                     console.log(table);
