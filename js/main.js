@@ -83,7 +83,7 @@ function dateAsDDMMYYY(d){
 
     function Upload() {
         var fileUpload = document.getElementById("fileUpload");
-        console.log(fileUpload.value.toLowerCase());
+        //console.log(fileUpload.value.toLowerCase());
         var regex = /^([a-zA-Z0-9\s_\\.\(\)\-:])+(.csv|.txt)$/;
         if (regex.test(fileUpload.value.toLowerCase())) {
             console.log(typeof (FileReader));
@@ -104,7 +104,7 @@ function dateAsDDMMYYY(d){
                             }
                         }
                     }
-                    console.log(table.toLowerCase());
+                    //console.log(table.toLowerCase());
                 }
                 reader.readAsText(fileUpload.files[0]);
             } else {
