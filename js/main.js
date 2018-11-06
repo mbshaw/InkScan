@@ -151,6 +151,6 @@ function dateAsDDMMYYY(d){
     
     if($("#date").val = ""){
          $("#date").value = new Date();
-         console.log(Date());
+         console.log("Date: "+Date());
     };
     $("#barcodes").select();
