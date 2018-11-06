@@ -148,5 +148,6 @@ function dateAsDDMMYYY(d){
         addRow("scansBody",$("#date").val(), $("#JobNo").val() , $("#barcodes").val());
         $("#barcodes").val("");
       });
-
+    
+    if($("#date").val = ""){ $("#date").val=dateAsDDMMYYY(Date())};
     $("#barcodes").select();
