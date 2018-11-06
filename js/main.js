@@ -133,6 +133,7 @@ function dateAsDDMMYYY(d){
       }
 
     function handleFiles(files) {
+        var table = document.getElementById("scansBody");
         for (var i = 0; i < files.length; ++i) {
             var file = files[i];
             console.log(file);
@@ -140,8 +141,39 @@ function dateAsDDMMYYY(d){
             reader.addEventListener('load', getReadFile(reader, i));
             reader.readAsText(file);
             console.log(reader);
+            var rows = reader.result.split("\r");
+            for (var i = 1; i < rows.length; i++) {         //array starts at 1 to remove header
+                var cells = rows[i].split(",");
+                if (cells.length > 1) {
+                    var row = table.insertRow(-1);
+                    for (var j = 0; j < cells.length; j++) {
+                        var cell = row.insertCell(-1);
+                        cell.innerHTML = cells[j];
+                    }
+                }
+            }
         };
     }
+
+    function handleFileSelect(evt) {
+        var files = evt.target.files; // FileList object
+    
+        // use the 1st file from the list
+        f = files[0];
+    
+        var reader = new FileReader();
+    
+        // Closure to capture the file information.
+        reader.onload = (function(theFile) {
+            return function(e) {
+    
+              jQuery( '#ms_word_filtered_html' ).val( e.target.result );
+            };
+          })(f);
+    
+          // Read in the image file as a data URL.
+          reader.readAsText(f);
+      }
 
     $( "#barcodes" ).change(function() {
         console.log( "Handler for .change() called." );
