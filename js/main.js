@@ -86,7 +86,7 @@ function dateAsDDMMYYY(d){
         //console.log(fileUpload.value.toLowerCase());
         var regex = /^([a-zA-Z0-9\s_\\.\(\)\-:])+(.csv|.txt)$/;
         if (regex.test(fileUpload.value.toLowerCase())) {
-            console.log(typeof (FileReader));
+            
             if (typeof (FileReader) != "undefined") {
                 var reader = new FileReader();
                 reader.onload = function (e) {
@@ -102,6 +102,7 @@ function dateAsDDMMYYY(d){
                                 var cell = row.insertCell(-1);
                                 cell.innerHTML = cells[j];
                             }
+                            console.log(row);
                         }
                     }
                     console.log(table);
@@ -182,8 +183,10 @@ function dateAsDDMMYYY(d){
         $("#barcodes").val("");
       });
     
-    if($("#date").val = ""){
-         $("#date").value = new Date();
-         console.log("Date: "+Date());
-    };
+    
+    var initD =  new Date();
+    initD = dateAsDDMMYYY(initD);
+      $("#date").val(initD);
+    console.log("Date: "+ initD);
+    
     $("#barcodes").select();
