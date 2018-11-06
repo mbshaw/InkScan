@@ -133,7 +133,7 @@ function dateAsDDMMYYY(d){
       }
 
     function handleFiles(files) {
-        console.log(files.target.files);
+        console.log(files);
         var table = document.getElementById("scansBody");
         for (var i = 0; i < files.length; ++i) {
             var file = files[i];
