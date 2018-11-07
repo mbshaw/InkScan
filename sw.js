@@ -42,7 +42,7 @@ self.addEventListener('install', function(evt) {
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(CACHE).then(function(cache) {
-      cache.addAll(
+      cache.addAll([
         './img/24x24.png',
         './img/36x36.png',
         './img/44x44.png',
@@ -56,9 +56,8 @@ self.addEventListener('install', function(event) {
         './img/150x150.png',
         './img/152x152.png',
         './img/300x300.png'
-      );
-      return cache.addAll(
-        // core assets
+      ]);
+      return cache.addAll([
         './index.htm',
         './manifest.json',
         './sw.js',
@@ -71,7 +70,7 @@ self.addEventListener('install', function(event) {
         './js/table2csv.js',
         './css/bootstrap.min.css',
         './css/main.css'
-      );
+      ]);
     })
   );
 });
