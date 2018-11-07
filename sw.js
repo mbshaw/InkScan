@@ -25,10 +25,8 @@ var precacheFiles = [
       './img/88x88.png',
       './img/96x96.png',
       './img/120x120.png',
-      './img/144x144.png',
       './img/150x150.png',
       './img/152x152.png',
-      './img/192x192.png',
       './img/300x300.png'
     ];
 
