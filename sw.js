@@ -29,7 +29,7 @@ var precacheFiles = [
       './img/152x152.png',
       './img/300x300.png'
     ];
-
+/*
 //Install stage sets up the cache-array to configure pre-cache content
 self.addEventListener('install', function(evt) {
   console.log('The service worker is being installed.');
@@ -38,7 +38,43 @@ self.addEventListener('install', function(evt) {
     return self.skipWaiting();
   }));
 });
-
+*/
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open(CACHE).then(function(cache) {
+      cache.addAll(
+        './img/24x24.png',
+        './img/36x36.png',
+        './img/44x44.png',
+        './img/48x48.png',
+        './img/50x50.png',
+        './img/72x72.png',
+        './img/76x76.png',
+        './img/88x88.png',
+        './img/96x96.png',
+        './img/120x120.png',
+        './img/150x150.png',
+        './img/152x152.png',
+        './img/300x300.png'
+      );
+      return cache.addAll(
+        // core assets
+        './index.htm',
+        './manifest.json',
+        './sw.js',
+        './js/bootstrap.min.js',
+        './js/FileSaver.js',
+        './js/jquery.min.js',
+        './js/main.js',
+        './js/manup.js',
+        './js/popper.min.js',
+        './js/table2csv.js',
+        './css/bootstrap.min.css',
+        './css/main.css'
+      );
+    })
+  );
+});
 
 //allow sw to control of current page
 self.addEventListener('activate', function(event) {
