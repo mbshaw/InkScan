@@ -2,7 +2,7 @@
 var CACHE = 'Cachev1.2';
 var precacheFiles = [
       /* Add an array of files to precache for your app */
-      '/',
+      '.',
       './index.htm',
       './manifest.json',
       './sw.js',
