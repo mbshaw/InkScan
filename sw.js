@@ -29,10 +29,7 @@ var precacheFiles = [
       '/img/150x150.png',
       '/img/152x152.png',
       '/img/192x192.png',
-      '/img/300x300.png',
-      '/img/620x300.png',
-      '/img/1024x1024.png',
-      '/img/1240x600.png'
+      '/img/300x300.png'
     ];
 
 //Install stage sets up the cache-array to configure pre-cache content
