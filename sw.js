@@ -1,4 +1,3 @@
-//This is the service worker with the Cache-first network
 
 var CACHE = 'Cachev1.2';
 var precacheFiles = [
