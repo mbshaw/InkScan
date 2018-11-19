@@ -83,13 +83,12 @@ function dateAsDDMMYYY(d){
 
     function Upload() {
         var fileUpload = document.getElementById("fileUpload");
-        //console.log(fileUpload.value.toLowerCase());
+        console.log(fileUpload.value.toLowerCase());
         var regex = /^([a-zA-Z0-9\s_\\.\(\)\-:])+(.csv|.txt)$/;
         if (regex.test(fileUpload.value.toLowerCase())) {
-            
+            console.log(typeof (FileReader));
             if (typeof (FileReader) != "undefined") {
                 var reader = new FileReader();
-                reader.
                 reader.onload = function (e) {
                     var table = document.getElementById("scansBody");
                     console.log(table);
@@ -103,10 +102,9 @@ function dateAsDDMMYYY(d){
                                 var cell = row.insertCell(-1);
                                 cell.innerHTML = cells[j];
                             }
-                            console.log(row);
                         }
                     }
-                    console.log(table);
+                    console.log(table.toLowerCase());
                 }
                 reader.readAsText(fileUpload.files[0]);
             } else {
@@ -117,18 +115,26 @@ function dateAsDDMMYYY(d){
         }
     };
 
+
     function getReadFile(reader, i) {
         return function () {
-            var table = document.getElementById("scansBody");
-            var rows = reader.result.split("\r");
+            var table = document.getElementById("scansBody");   //select table body
+            var rows = reader.result.split(/\r?\n|\r/);               // get rows  .split("\r"); 
+            console.log(rows)
             for (var i = 1; i < rows.length; i++) {         //array starts at 1 to remove header
+                //table
                 var cells = rows[i].split(",");
-                if (cells.length > 1) {
-                    var row = table.insertRow(-1);
+                if (cells.length > 1) {                     //check for empty row
+                    //var row = table.insertRow(-1);
+                    var row = "<tr>";
                     for (var j = 0; j < cells.length; j++) {
-                        var cell = row.insertCell(-1);
-                        cell.innerHTML = cells[j];
+                        //var cell = row.insertCell(-1);
+                        row += "<td>" + cells[j].replace(/"/g,"") + "</td>";
+                        //cell.innerHTML = cells[j];
                     }
+                    row += "</tr>";
+                    console.log(row)
+                    table.innerHTML += row;
                 }
             }
         }

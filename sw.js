@@ -1,5 +1,5 @@
 
-var CACHE = 'Cachev1.2';
+var CACHE = 'Cachev1.3';
 
 
 self.addEventListener('install', function(event) {
