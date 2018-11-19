@@ -24,9 +24,9 @@ Below the Table is a button labeled "choose files" this will allow you to open a
 * Once this file has loaded you can continue to add rows to the top of the table
 * Remember to save the updated file once you have added new info to the table
 
-#Transfering the data
+# Transfering the data
 
-##Via Cable
+## Via Cable
 To copy the CSV files to a computer:
 * connect the device to computer with a Micro USB cable
 * In Windows Explorer you should see the Tablet as another drive on the PC
