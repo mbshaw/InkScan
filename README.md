@@ -11,7 +11,7 @@ the date field will contain todays date. You can change this if you want to use 
 * Scan the barcode of the ink batch codes. this will create a new line in the table
 
 ## Save table as CSV
-The save as CSV button will 
+The save as CSV button will Save the current table as a CSV file. Depending on the browser settings this should save to the **'Downloads'** folder
 
 ## Clear Table
 This button will clear the table without saving any data
@@ -23,6 +23,18 @@ Below the Table is a button labeled "choose files" this will allow you to open a
 * Search for the previously saved file and select it
 * Once this file has loaded you can continue to add rows to the top of the table
 * Remember to save the updated file once you have added new info to the table
+
+#Transfering the data
+
+##Via Cable
+To copy the CSV files to a computer:
+* connect the device to computer with a Micro USB cable
+* In Windows Explorer you should see the Tablet as another drive on the PC
+* Open the Tablet folder and navigate to the **"Downloads"** folder 
+  (unless you have set the device to save web downloads ot a different folder)
+* Copy or move the files to a folder on the PC
+* Delete any files you no longer want on the device
+* Unplug the device
 
 # reload the app
 
@@ -61,6 +73,6 @@ To enable both a BT barcode scanner and the screen keyboard:
 * Select 'Show on-screen keyboard'
 
 # ToDo
-- [ ] Ensure app works fully offline
-- [ ] Import saved csv files to app table
+- [x] Ensure app works fully offline
+- [x] Import saved csv files to app table
 - [ ] Allow editing of table cells in app
