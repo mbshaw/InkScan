@@ -41,18 +41,18 @@ To copy the CSV files to a computer:
 ## remove the old app
 * Press and hold the app icon untill icons appear at the top of the page to move or delete.
 * Drag the app icon onto the delete icon and it will dissapear.
-* Goto https://mbshaw.github.io/inkscan/ in a browser on the devicce.
+* Go to https://mbshaw.github.io/inkscan/ in a browser on the device.
 * Clear the Cache by:
   * Tapping the 3 dots at the top right of the Chrome browser
   * Settings → Site settings → tap 'All sites' → choose 'your site' → clear and reset
 
 
 # Install the App for offline use
-* Goto https://mbshaw.github.io/inkscan/ in a browser on the devicce.
+* Go to https://mbshaw.github.io/inkscan/ in a browser on the device.
 * Once loaded tap the menu button at the top left of the browser window (Three vertical dots)
 * Select 'Add to Home Screen'
-* A popup wil appear wher you can edit the App name, Click 'OK'
-* Return to home screen and swipe teh pages untill you find the app.
+* A popup will appear where you can edit the App name, Click 'OK'
+* Return to home screen and swipe the pages until you find the app.
 * Tap on Icon to launch App
 
 # Setup scanner and soft keyboard
