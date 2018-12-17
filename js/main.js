@@ -146,12 +146,14 @@ function dateAsDDMMYYY(d){
                         //var cell = row.insertCell(-1);
                         row += "<td>" + cells[j].replace(/"/g,"") + "</td>";
                         //cell.innerHTML = cells[j];
+                        if ( j == 1 ){loadedJobNo = ""+cells[j].replace(/"/g,"")}
                     }
                     row += "</tr>";
                     console.log(row)
                     table.innerHTML += row;
                 }
             }
+            console.log("JobNo "+ loadedJobNo);
             document.getElementById("JobNo").value = loadedJobNo;
         }
       }
