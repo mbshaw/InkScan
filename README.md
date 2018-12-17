@@ -18,8 +18,9 @@ This button will clear the table without saving any data
 
 ## Load Previously saved CSV into table
 Below the Table is a button labeled "choose files" this will allow you to open a previously saved CSV file fo ink batch codes. 
-* Click the "Choose Files" button
-* from the options popup at the bottom of the devices select "Documents"
+* Click the "Load CSV file" button
+* Click "OK" to continue or "Cancel" if you want to save the data already in the table
+* From the options popup at the bottom of the devices select "Documents"
 * Search for the previously saved file and select it
 * Once this file has loaded you can continue to add rows to the top of the table
 * Remember to save the updated file once you have added new info to the table
@@ -80,4 +81,6 @@ To enable both a BT barcode scanner and the screen keyboard:
 # ToDo
 - [x] Ensure app works fully offline
 - [x] Import saved csv files to app table
+- [x] Add loaded Job number to form
+- [x] Clear table data when loading saved file
 - [ ] Allow editing of table cells in app
