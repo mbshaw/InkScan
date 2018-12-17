@@ -90,7 +90,7 @@ a visitor chooses to add your website to their home-screen: -->
                                         <i class="fa fa-save"></i> Save to CSV
                                     </button>
                                     <!--<button id="btn-save" class="btn" onclick="">Save to CSV</button> -->
-                                    <button id="btn-clear" class="btn btn-primary " onclick="">
+                                    <button id="btn-clear" class="btn btn-primary " onclick="ClearTable()">
                                         <i class='fas fa-table'></i> Clear Table
                                     </button>
                                 </div>
@@ -113,9 +113,8 @@ a visitor chooses to add your website to their home-screen: -->
                             <input type="file" id="fileUpload" class="btn"/>
                             <button id="btn-upload" class="btn" onclick="Upload()">Upload CSV</button>
                             -->
-                            <span class="btn btn-default btn-file">
-                                <input type="file" onchange="handleFiles(this.files)" multiple placeholder="Select a CSV file">
-                            </span>
+                            <input id="fileElem" type="file" accept=".csv" onchange="handleFiles(this.files)" multiple style="display:none">
+                            <button id="fileSelect" class="btn btn-primary" onclick="loadCsvFile()">Load CSV file</button>
                         </div>
                     </div>
                     <!--

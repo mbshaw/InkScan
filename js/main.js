@@ -12,6 +12,17 @@ if('serviceWorker' in navigator){
     console.log('Services workers not supported');
 }
 */
+const fileSelect = document.getElementById("fileSelect"), fileElem = document.getElementById("fileElem");
+
+function loadCsvFile(e) {
+    var clear = confirm("loading a file will clear the current table. Do you want to continue?");
+    if (clear == true){
+        ClearTable();
+        if (fileElem) {
+            fileElem.click();
+        }
+    }
+}
 
 function clearTableBody(tableBody){
     document.getElementById(tableBody).innerHTML = "";
@@ -29,10 +40,13 @@ function addRow(tBodyID, rDate, rJobNo, rBatchCode ) {
     row.insertCell(2).innerHTML = rBatchCode;
 }
 
-$("#btn-clear").click( function() {
+
+function ClearTable(){
+    //console.log("Clearing Table");
     document.getElementById("scansBody").innerHTML = "";
-    document.getElementById("barcodes").select();
-});
+}
+
+$("#btn-clear").click(ClearTable());
 
 $("#btn-save").click( function() {
     var jobNo = $("#JobNo").val();
@@ -120,7 +134,8 @@ function dateAsDDMMYYY(d){
         return function () {
             var table = document.getElementById("scansBody");   //select table body
             var rows = reader.result.split(/\r?\n|\r/);               // get rows  .split("\r"); 
-            console.log(rows)
+            var loadedJobNo = "";
+            //console.log(rows)
             for (var i = 1; i < rows.length; i++) {         //array starts at 1 to remove header
                 //table
                 var cells = rows[i].split(",");
@@ -137,6 +152,7 @@ function dateAsDDMMYYY(d){
                     table.innerHTML += row;
                 }
             }
+            document.getElementById("JobNo").value = loadedJobNo;
         }
       }
 
