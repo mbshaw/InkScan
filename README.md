@@ -11,7 +11,7 @@ the date field will contain todays date. You can change this if you want to use 
 * Scan the barcode of the ink batch codes. this will create a new line in the table
 
 ## Save table as CSV
-The save as CSV button will 
+The save as CSV button will Save the current table as a CSV file. Depending on the browser settings this should save to the **'Downloads'** folder
 
 ## Clear Table
 This button will clear the table without saving any data
@@ -24,18 +24,35 @@ Below the Table is a button labeled "choose files" this will allow you to open a
 * Once this file has loaded you can continue to add rows to the top of the table
 * Remember to save the updated file once you have added new info to the table
 
+# Transfering the data
+
+## Via Cable
+To copy the CSV files to a computer:
+* connect the device to computer with a Micro USB cable
+* In Windows Explorer you should see the Tablet as another drive on the PC
+* Open the Tablet folder and navigate to the **"Downloads"** folder 
+  (unless you have set the device to save web downloads ot a different folder)
+* Copy or move the files to a folder on the PC
+* Delete any files you no longer want on the device
+* Unplug the device
+
 # reload the app
 
 ## remove the old app
-Press and hold the app icon untill icons appear at the top of the page to move or delete.
-Drag the app icon onto the delete icon and it will dissapear
+* Press and hold the app icon untill icons appear at the top of the page to move or delete.
+* Drag the app icon onto the delete icon and it will dissapear.
+* Go to https://mbshaw.github.io/inkscan/ in a browser on the device.
+* Clear the Cache by:
+  * Tapping the 3 dots at the top right of the Chrome browser
+  * Settings → Site settings → tap 'All sites' → choose 'your site' → clear and reset
+
 
 # Install the App for offline use
-* Goto https://mbshaw.github.io/inkscan/ in a browser on the devicce.
+* Go to https://mbshaw.github.io/inkscan/ in a browser on the device.
 * Once loaded tap the menu button at the top left of the browser window (Three vertical dots)
 * Select 'Add to Home Screen'
-* A popup wil appear wher you can edit the App name, Click 'OK'
-* Return to home screen and swipe teh pages untill you find the app.
+* A popup will appear where you can edit the App name, Click 'OK'
+* Return to home screen and swipe the pages until you find the app.
 * Tap on Icon to launch App
 
 # Setup scanner and soft keyboard
@@ -61,6 +78,6 @@ To enable both a BT barcode scanner and the screen keyboard:
 * Select 'Show on-screen keyboard'
 
 # ToDo
-- [ ] Ensure app works fully offline
-- [ ] Import saved csv files to app table
+- [x] Ensure app works fully offline
+- [x] Import saved csv files to app table
 - [ ] Allow editing of table cells in app
